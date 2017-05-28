@@ -1,0 +1,16 @@
+BugsInTeammateCode.txt
+
+Bug Report 1
+Where: In the smithy function when cardEffect is called with smithy as the option. In my usage I call cardEffect after using initializeGame.
+Error: The loop condition checks for > 3 rather than < 3 so first few iterations will get skipped. This should cause an infinite loop.
+Expected: It is expected that the player will pick up 3 cards into their hand and have 8 cards in their hand at this point.
+
+Bug Report 2
+Where: In the adventurer funciton when cardEffect is called with adventurer as the option. In my usage I call cardEffect after using initializeGame.
+Error: The gold card is not being considered a treasure card when trying to reveal 2 treasure cards in your card and putting them into your hand.
+Expected: It is expected that gold, silver and copper are all counted as treasure cards and that the player stops revealing cards once they have revealed 2 treasure cards.
+
+Bug Report 3
+Where: In the village function when cardEffect is called with village as the option. In my usage I call cardEffect after using initializeGame.
+Error: This function is discarding the other players card at the end of the turn rather than the current players card.
+Expected: This function should only discard the current players card and make no changes to the cards in any other players' hands. It is invalid for a player to have -1 cards in their hand.
